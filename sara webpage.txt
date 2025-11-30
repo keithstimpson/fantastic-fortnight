@@ -1,0 +1,882 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Child & Adult Psychotherapy | Your Name, Accredited Psychotherapist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Confidential child and adult psychotherapy with an accredited psychotherapist. Support for anxiety, depression, trauma, relationships and more."
+  />
+  <style>
+    :root {
+      --primary: #2f6f8f;
+      --primary-light: #e7f1f6;
+      --accent: #f3a952;
+      --bg: #f7f7f7;
+      --text: #1f2933;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border-radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+    }
+
+    .brand {
+      font-weight: 600;
+      font-size: 1.05rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand span:last-child {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      padding-bottom: 0.15rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-color: var(--primary);
+    }
+
+    .btn-primary,
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: transform 0.05s ease, box-shadow 0.1s ease,
+        background-color 0.1s ease, border-color 0.1s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 7px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .btn-primary:hover {
+      background-color: #275a72;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+    }
+
+    .btn-outline {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: #ffffff;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-light);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3rem 0 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--primary-light);
+      color: var(--primary);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-badge span {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      margin: 0 0 0.75rem;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      max-width: 32rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e5e7eb;
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.15rem;
+    }
+
+    .hero-card ul {
+      padding-left: 1.1rem;
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-card li + li {
+      margin-top: 0.35rem;
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: #ffffff;
+    }
+
+    section:nth-of-type(even) {
+      background-color: var(--bg);
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-header h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+    }
+
+    .section-header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 38rem;
+    }
+
+    /* About */
+    .two-column {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      background-color: #f3f4f6;
+      color: var(--muted);
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Services */
+    .card-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 1.25rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 1.1rem;
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .card ul li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* Process / Approach */
+    .steps {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .step h3 {
+      margin: 0 0 0.2rem;
+      font-size: 0.98rem;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* FAQ */
+    .faq-item + .faq-item {
+      margin-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 1rem;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-answer {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .contact-box {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--border-radius);
+      border: 1px solid #e5e7eb;
+    }
+
+    .contact-row {
+      font-size: 0.9rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-label {
+      font-weight: 600;
+    }
+
+    form {
+      display: grid;
+      gap: 0.9rem;
+      margin-top: 0.5rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(47, 111, 143, 0.15);
+    }
+
+    .privacy-note {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* Footer */
+    footer {
+      background-color: #111827;
+      color: #d1d5db;
+      padding: 1.5rem 0;
+      font-size: 0.8rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    /* Responsive */
+    @media (min-width: 768px) {
+      .hero {
+        padding: 3.5rem 0 3rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      }
+
+      .two-column {
+        grid-template-columns: 1.5fr 1fr;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1.1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span>Your Name</span>
+          <span>Accredited Child &amp; Adult Psychotherapist</span>
+        </div>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#approach">How I Work</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a href="#contact" class="btn-outline">Book a Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-badge">
+              Accredited Psychotherapist
+              <span>Children • Adolescents • Adults</span>
+            </div>
+            <h1>
+              Space to be heard,<br />
+              <span>supported and understood.</span>
+            </h1>
+            <p class="hero-subtitle">
+              I offer warm, confidential psychotherapy for children, young people
+              and adults experiencing anxiety, low mood, relationship difficulties,
+              trauma and life transitions.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn-primary">Book an initial session</a>
+              <a href="#services" class="btn-outline">View services</a>
+            </div>
+            <p class="hero-note">
+              Sessions available in-person and online. No referral required.
+            </p>
+          </div>
+          <aside class="hero-card" aria-label="Key information">
+            <h2>At a glance</h2>
+            <ul>
+              <li><strong>Location:</strong> Your Clinic / City (In person &amp; online)</li>
+              <li><strong>Accreditation:</strong> e.g. UKCP / BACP / HCPC registered</li>
+              <li><strong>Specialisms:</strong> anxiety, depression, trauma, relationships, self-esteem</li>
+              <li><strong>Age groups:</strong> 5+ children, adolescents, adults</li>
+              <li><strong>Languages:</strong> English (+ others if relevant)</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <h2>About me</h2>
+          <p>
+            A professional, compassionate approach to emotional wellbeing for children,
+            young people and adults.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <p>
+              I am an accredited psychotherapist with extensive experience working in
+              private practice, schools and mental health services. I provide a safe,
+              non-judgemental space where you, your child or teenager can explore
+              thoughts and feelings at a comfortable pace.
+            </p>
+            <p>
+              My background includes supporting individuals with anxiety, low mood,
+              trauma, bereavement, identity issues, neurodivergence, and difficulties
+              in family and peer relationships. I draw on evidence-based approaches,
+              adapting our work to suit each person's age, needs and preferences.
+            </p>
+            <p>
+              Therapy can help you make sense of what you’re going through, develop
+              healthier coping strategies and build a stronger sense of self.
+            </p>
+          </div>
+          <div>
+            <div class="card">
+              <h3>Qualifications &amp; registration</h3>
+              <p><strong>Your Name</strong></p>
+              <p>
+                e.g. MA Psychotherapy, PGDip in Child &amp; Adolescent Psychotherapy,
+                Registered with [Professional Body].
+              </p>
+              <p>Professional memberships:</p>
+              <span class="tag">UKCP</span>
+              <span class="tag">BACP</span>
+              <span class="tag">Enhanced DBS</span>
+              <span class="tag">Insurance in place</span>
+              <p style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--muted);">
+                I adhere to the ethical guidelines and codes of conduct of my
+                professional body, including regular supervision and ongoing training.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Who I work with</h2>
+          <p>
+            Individual psychotherapy tailored to developmental stage, life context and
+            personal goals.
+          </p>
+        </div>
+
+        <div class="card-grid">
+          <div class="card">
+            <h3>Children (approx. 5–11)</h3>
+            <p>
+              Creative, play-based therapy to help children express difficult feelings
+              and experiences in a way that feels safe and manageable.
+            </p>
+            <ul>
+              <li>Worry, anxiety and separation difficulties</li>
+              <li>Changes at home or school</li>
+              <li>Friendship and social challenges</li>
+              <li>Bereavement, loss or family separation</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Adolescents &amp; young adults</h3>
+            <p>
+              A supportive space for teenagers and young adults to explore identity,
+              relationships and emotional wellbeing.
+            </p>
+            <ul>
+              <li>Low mood, stress and exam pressure</li>
+              <li>Self-esteem and body image concerns</li>
+              <li>Peer, family and relationship difficulties</li>
+              <li>Transitions (school, university, work)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Adults</h3>
+            <p>
+              Open-ended or time-limited therapy for adults wanting to better
+              understand themselves and create meaningful change.
+            </p>
+            <ul>
+              <li>Anxiety, depression and burnout</li>
+              <li>Relationship patterns and attachment</li>
+              <li>Trauma, loss and life transitions</li>
+              <li>Personal growth and self-development</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.75rem;">
+          <h3 style="margin-bottom: 0.35rem; font-size: 1rem;">
+            Session fees &amp; practicalities
+          </h3>
+          <p style="font-size: 0.9rem; color: var(--muted); max-width: 46rem;">
+            Sessions are usually held once a week at the same time. Fees start from
+            <strong>£XX</strong> for 50 minutes (online or in person). Concessionary rates
+            may be available for students and those on low incomes. Please contact me
+            to discuss your circumstances.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH / PROCESS -->
+    <section id="approach">
+      <div class="container">
+        <div class="section-header">
+          <h2>How therapy works</h2>
+          <p>
+            Clear, collaborative and respectful from first contact to ongoing sessions.
+          </p>
+        </div>
+
+        <div class="two-column">
+          <div>
+            <h3 style="margin-top: 0; font-size: 1rem;">What to expect</h3>
+            <p>
+              I work relationally and psychodynamically, informed by attachment
+              theory and trauma-sensitive practice. This means we pay attention to
+              your current difficulties as well as past experiences that may be
+              shaping how you feel and relate to others.
+            </p>
+            <p>
+              With children and young people, I often use play, art and other creative
+              approaches to help them communicate and feel understood. With adults,
+              therapy is usually talking-based, but always paced carefully and
+              collaboratively.
+            </p>
+          </div>
+
+          <div>
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div>
+                  <h3>Initial contact</h3>
+                  <p>
+                    You can email or call to briefly outline what you’re looking for.
+                    We can arrange an initial consultation to see whether we feel
+                    like a good fit.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div>
+                  <h3>Assessment sessions</h3>
+                  <p>
+                    We’ll explore your history, current concerns and what you hope
+                    to gain from therapy. For younger children, this may include
+                    parent or caregiver meetings.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div>
+                  <h3>Ongoing therapy</h3>
+                  <p>
+                    If we decide to work together, we’ll agree a regular session
+                    time. Some people come for a set number of sessions; others
+                    choose open-ended work.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div>
+                  <h3>Review &amp; ending</h3>
+                  <p>
+                    We’ll review our work together and think carefully about
+                    endings, including how you can continue to reflect and look
+                    after yourself beyond therapy.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently asked questions</h2>
+          <p>
+            A few common questions about psychotherapy, confidentiality and practical details.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Is everything I say confidential?</div>
+          <div class="faq-answer">
+            Yes, sessions are confidential within the limits of professional
+            ethics. There are rare circumstances where I may need to break
+            confidentiality to keep you or someone else safe. I will always
+            explain this in more detail at our first meeting and wherever
+            possible discuss any concerns with you.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How long will I need to come for therapy?</div>
+          <div class="faq-answer">
+            This varies from person to person. Some people benefit from a short,
+            focused piece of work over a few months; others prefer longer-term
+            therapy. We can discuss your hopes and agree together what feels
+            appropriate, reviewing this regularly.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Do I need a referral from my GP?</div>
+          <div class="faq-answer">
+            No. You can self-refer by contacting me directly. If you are already
+            under the care of other professionals, we can talk about whether it
+            may be helpful (with your consent) to liaise with them.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I have online sessions?</div>
+          <div class="faq-answer">
+            Yes. I offer online sessions via a secure video platform for adults
+            and some older adolescents, where clinically appropriate. We can also
+            discuss blended options if you would like to combine in-person and
+            online sessions.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact &amp; appointments</h2>
+          <p>
+            Please get in touch to arrange an initial consultation or to ask any questions.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box">
+            <h3 style="margin-top: 0; font-size: 1rem;">Get in touch</h3>
+            <div class="contact-row">
+              <span class="contact-label">Email:</span>
+              <a href="mailto:youremail@example.com">youremail@example.com</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Phone:</span>
+              <a href="tel:+440000000000">+44 (0)0000 000000</a>
+            </div>
+            <div class="contact-row">
+              <span class="contact-label">Practice address:</span>
+              Your Practice Name,<br />
+              Street Address,<br />
+              City, Postcode
+            </div>
+            <p class="privacy-note">
+              Please avoid including highly sensitive personal details in your
+              first message. I aim to respond within X working days.
+            </p>
+          </div>
+
+          <div>
+            <!-- Note: to make this form work, you’ll need to connect it to an email handler or form service -->
+            <form>
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" />
+              </div>
+              <div>
+                <label for="message">How can I help?</label>
+                <textarea id="message" name="message"></textarea>
+              </div>
+              <button type="submit" class="btn-primary">
+                Send enquiry (demo)
+              </button>
+              <p class="privacy-note">
+                By sending this form you consent to me contacting you about your
+                enquiry. Your information will be stored securely and not shared
+                with third parties, in line with my privacy policy.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          &copy; <span id="year"></span> Your Name – Child &amp; Adult Psychotherapist.
+          All rights reserved.
+        </div>
+        <div class="footer-links">
+          <a href="#top">Back to top</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms &amp; conditions</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Set current year in footer
+      document.getElementById("year").textContent =
+        new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
+
